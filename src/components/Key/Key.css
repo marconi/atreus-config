@@ -1,0 +1,60 @@
+
+:local(.wrapper) {
+  background: #f4f4f4;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #c7c7c7;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+:local(.inner) {
+  margin: 4px 4px 8px 4px;
+  background: #fcfcfc;
+  border-radius: 3px;
+  width: 36px;
+  height: calc(100% - 12px);
+  padding: 0px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+:local(.top-legend) {
+  text-align: center;
+}
+
+:local(.no-bottom .top-legend) {
+  padding-top: 4px;
+}
+
+:local(.bottom-legend) {
+  text-align: center;
+}
+
+:local(.left-pane-key-thumb) {
+  height: 84px;
+  position: absolute;
+  top: -42px;
+  right: -3px;
+}
+
+:local(.right-pane-key-thumb) {
+  height: 84px;
+  position: absolute;
+  top: -42px;
+  left: -3px;
+}
+
+:local(.column-1) {
+  margin-top: -20px;
+}
+
+:local(.column-2) {
+  margin-top: -40px;
+}
+
+:local(.column-3) {
+  margin-top: -20px;
+}
