@@ -4,6 +4,7 @@ import CssModules from 'react-css-modules'
 import { chunk } from 'lodash';
 
 import Key from '../Key'
+import ThumbKey from '../ThumbKey'
 import styles from './Row.css'
 
 export const Row = ({ keys, number, leftThumbKey, rightThumbKey }) => {
@@ -15,25 +16,22 @@ export const Row = ({ keys, number, leftThumbKey, rightThumbKey }) => {
         {leftKeys.map((key, i) => (
           <Key
             key={`left-pane-key-${i}`}
-            pane="left"
             column={i}
             {...key}
           />
         ))}
 
         {leftThumbKey &&
-          <Key
-            pane="left"
-            thumbClassName="left-pane-key-thumb"
+          <ThumbKey
+            position="left"
             {...leftThumbKey}
           />
         }
       </div>
       <div styleName={`right-pane right-pane-row-${number}`}>
         {rightThumbKey &&
-          <Key
-            pane="right"
-            thumbClassName="right-pane-key-thumb"
+          <ThumbKey
+            position="right"
             {...rightThumbKey}
           />
         }
@@ -41,7 +39,6 @@ export const Row = ({ keys, number, leftThumbKey, rightThumbKey }) => {
         {rightKeys.map((key, i) => (
           <Key
             key={`right-pane-key-${i}`}
-            pane="right"
             column={i}
             {...key}
           />

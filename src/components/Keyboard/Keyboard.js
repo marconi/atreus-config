@@ -66,8 +66,8 @@ export const Keyboard = (props) => (
         {topLegend: '"', bottomLegend: '\''},
         {topLegend: 'fn'},
       ]}
-      leftThumbKey={{topLegend: '⌫', isDouble: true}}
-      rightThumbKey={{topLegend: '↩', isDouble: true}}
+      leftThumbKey={{topLegend: '⌫'}}
+      rightThumbKey={{topLegend: '↩'}}
     />
   </div>
 )

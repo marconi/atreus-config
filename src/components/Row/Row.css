@@ -1,53 +1,52 @@
 
-:local(.row) {
+.row {
   display: flex;
   justify-content: center;
 }
 
-:local(.left-pane) {
+.left-pane {
   display: flex;
-  /* width: 374px; */
   width: 322px;
   transform: rotate(10deg);
 }
 
-:local(.right-pane) {
+.right-pane {
   display: flex;
   width: 322px;
   justify-content: flex-end;
   transform: rotate(-10deg);
 }
 
-:local(.left-pane-row-0) {
+.left-pane-row-0 {
   margin-right: 0px;
 }
 
-:local(.right-pane-row-0) {
+.right-pane-row-0 {
   margin-left: 0px;
 }
 
-:local(.left-pane-row-1) {
+.left-pane-row-1 {
   margin-right: 10px;
 }
 
-:local(.right-pane-row-1) {
+.right-pane-row-1 {
   margin-left: 10px;
 }
 
-:local(.left-pane-row-2) {
+.left-pane-row-2 {
   margin-right: 20px;
 }
 
-:local(.right-pane-row-2) {
+.right-pane-row-2 {
   margin-left: 20px;
 }
 
-:local(.left-pane-row-3) {
+.left-pane-row-3 {
   margin-right: 30px;
   position: relative;
 }
 
-:local(.right-pane-row-3) {
+.right-pane-row-3 {
   margin-left: 30px;
   position: relative;
 }

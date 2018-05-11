@@ -1,5 +1,5 @@
 
-:local(.wrapper) {
+.wrapper {
   background: #f4f4f4;
   width: 52px;
   height: 52px;
@@ -8,7 +8,7 @@
   cursor: pointer;
 }
 
-:local(.inner) {
+.inner {
   margin: 4px 4px 8px 4px;
   background: #fcfcfc;
   border-radius: 3px;
@@ -21,40 +21,26 @@
   flex-direction: column;
 }
 
-:local(.top-legend) {
+.top-legend {
   text-align: center;
 }
 
-:local(.no-bottom .top-legend) {
+.no-bottom .top-legend {
   padding-top: 4px;
 }
 
-:local(.bottom-legend) {
+.bottom-legend {
   text-align: center;
 }
 
-:local(.left-pane-key-thumb) {
-  height: 84px;
-  position: absolute;
-  top: -42px;
-  right: -3px;
-}
-
-:local(.right-pane-key-thumb) {
-  height: 84px;
-  position: absolute;
-  top: -42px;
-  left: -3px;
-}
-
-:local(.column-1) {
+.column-1 {
   margin-top: -20px;
 }
 
-:local(.column-2) {
+.column-2 {
   margin-top: -40px;
 }
 
-:local(.column-3) {
+.column-3 {
   margin-top: -20px;
 }
