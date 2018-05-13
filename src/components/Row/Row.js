@@ -7,7 +7,16 @@ import Key from '../Key'
 import ThumbKey from '../ThumbKey'
 import styles from './Row.css'
 
-export const Row = ({ keys, number, leftThumbKey, rightThumbKey }) => {
+const getIndentLevel = (column) => {
+  if (column === 1 || column === 3) {
+    return 'one'
+  } else if (column === 2) {
+    return 'two'
+  }
+  return null
+}
+
+export const Row = ({ keys, number, leftThumbKey, rightThumbKey, onKeyClick }) => {
   const [ leftKeys, rightKeys ] = chunk(keys, 5);
 
   return (
@@ -16,30 +25,24 @@ export const Row = ({ keys, number, leftThumbKey, rightThumbKey }) => {
         {leftKeys.map((key, i) => (
           <Key
             key={`left-pane-key-${i}`}
-            column={i}
+            indentLevel={getIndentLevel(i)}
             {...key}
           />
         ))}
 
         {leftThumbKey &&
-          <ThumbKey
-            position="left"
-            {...leftThumbKey}
-          />
+          <ThumbKey {...leftThumbKey} />
         }
       </div>
       <div styleName={`right-pane right-pane-row-${number}`}>
         {rightThumbKey &&
-          <ThumbKey
-            position="right"
-            {...rightThumbKey}
-          />
+          <ThumbKey {...rightThumbKey} />
         }
 
         {rightKeys.map((key, i) => (
           <Key
             key={`right-pane-key-${i}`}
-            column={i}
+            indentLevel={getIndentLevel(i)}
             {...key}
           />
         ))}
@@ -61,7 +64,7 @@ Row.propTypes = {
   rightThumbKey: PropTypes.shape({
     topLegend: PropTypes.string,
     bottomLegend: PropTypes.string,
-  }),
+  })
 }
 
 export default CssModules(Row, styles, { allowMultiple: true })

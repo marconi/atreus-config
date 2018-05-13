@@ -6,6 +6,16 @@
   border: 1px solid #c7c7c7;
   border-radius: 4px;
   cursor: pointer;
+  position: relative;
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
 }
 
 .inner {
@@ -33,14 +43,14 @@
   text-align: center;
 }
 
-.column-1 {
+.indent-one {
   margin-top: -20px;
 }
 
-.column-2 {
+.indent-two {
   margin-top: -40px;
 }
 
-.column-3 {
-  margin-top: -20px;
-}
+.left {}
+
+.right {}
