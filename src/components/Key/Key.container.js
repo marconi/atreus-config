@@ -9,6 +9,7 @@ export class KeyContainer extends Component {
   static propTypes = {
     uiService: PropTypes.shape({
       setShowKeyDialogAt: PropTypes.func,
+      isShowingKeyDialogAt: PropTypes.func,
     }),
     position: PropTypes.arrayOf(PropTypes.number),
     keyboard: PropTypes.object,
@@ -45,11 +46,17 @@ export class KeyContainer extends Component {
   }
 
   render () {
+    const {
+      uiService,
+      position,
+    } = this.props
+
     return (
       <div>
         <KeyComponent
           ref={this.ref}
           onClick={this.handleClick}
+          isActive={uiService.isShowingKeyDialogAt(position)}
           {...this.props}
         />
       </div>

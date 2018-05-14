@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CssModules from 'react-css-modules'
-import { chunk } from 'lodash';
+import { chunk } from 'lodash'
+import cx from 'classnames'
 
 import Key from '../Key'
 import ThumbKey from '../ThumbKey'
@@ -21,7 +22,7 @@ export const Row = ({ keys, number, leftThumbKey, rightThumbKey, onKeyClick }) =
 
   return (
     <div styleName='row'>
-      <div styleName={`left-pane left-pane-row-${number}`}>
+      <div styleName={cx('left-pane', `left-pane-row-${number}`)}>
         {leftKeys.map((key, i) => (
           <Key
             key={`left-pane-key-${i}`}
@@ -34,7 +35,7 @@ export const Row = ({ keys, number, leftThumbKey, rightThumbKey, onKeyClick }) =
           <ThumbKey {...leftThumbKey} />
         }
       </div>
-      <div styleName={`right-pane right-pane-row-${number}`}>
+      <div styleName={cx('right-pane', `right-pane-row-${number}`)}>
         {rightThumbKey &&
           <ThumbKey {...rightThumbKey} />
         }

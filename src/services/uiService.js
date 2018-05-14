@@ -17,6 +17,10 @@ export class UIService {
   }
 
   isShowingKeyDialogAt = ([ x, y ]) => {
+    if (!this.showKeyDialogAt.position.length) {
+      return false
+    }
+
     const xx = get(this.showKeyDialogAt, 'position[0]')
     const yy = get(this.showKeyDialogAt, 'position[1]')
     return xx === x && yy === y

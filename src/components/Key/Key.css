@@ -54,3 +54,8 @@
 .left {}
 
 .right {}
+
+.active {
+  border-color: #3F89EE;
+  color: #3F89EE;
+}
