@@ -2,5 +2,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px;
+  width: 300px;
+  border: 0;
+  box-shadow: 0 0.2rem 0.5rem rgba(69,77,93,.3);
 }

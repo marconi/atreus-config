@@ -22,9 +22,8 @@
   margin: 4px 4px 8px 4px;
   background: #fcfcfc;
   border-radius: 3px;
-  width: 36px;
+  width: 42px;
   height: calc(100% - 12px);
-  padding: 0px 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +55,7 @@
 .right {}
 
 .active {
-  border-color: #3F89EE;
-  color: #3F89EE;
+  border-color: #2684ff;
+  color: #2684ff;
+  border-width: 2px;
 }

@@ -1,1 +1,1 @@
-export { default } from './KeyDialog'
+export { default } from './KeyDialog.container'

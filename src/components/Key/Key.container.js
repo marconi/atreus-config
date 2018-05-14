@@ -20,11 +20,23 @@ export class KeyContainer extends Component {
     this.ref = React.createRef()
   }
 
+  matchesPane = ([ x, y ], expected) => {
+    const midCol = (y < 3) ? 5 : 6
+    const pane = (x < midCol) ? 'left' : 'right'
+    return pane === expected
+  }
+
   handleClick = () => {
     const {
       uiService,
       position,
     } = this.props
+
+    // HACK: to center keydialog inside a key,
+    // we need to get the coordinates of the key's center
+    // by creating on-fly marker element.
+    // we then absolutely position it and take its top-left
+    // posidion.
 
     // create a temporary marker
     const marker = document.createElement('div')
@@ -56,6 +68,8 @@ export class KeyContainer extends Component {
         <KeyComponent
           ref={this.ref}
           onClick={this.handleClick}
+          isLeft={this.matchesPane(position, 'left')}
+          isRight={this.matchesPane(position, 'right')}
           isActive={uiService.isShowingKeyDialogAt(position)}
           {...this.props}
         />

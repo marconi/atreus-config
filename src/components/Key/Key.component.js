@@ -6,25 +6,21 @@ import cx from 'classnames'
 
 import styles from './Key.css'
 
-const getPaneClass = ([ x, y ], expected) => {
-  const midCol = (y < 3) ? 5 : 6
-  const pane = (x < midCol) ? 'left' : 'right'
-  return pane === expected
-}
-
 export const Key = ({
   topLegend,
   bottomLegend,
   position,
   indentLevel,
   onClick,
+  isLeft,
+  isRight,
   isActive,
 }, ref) => (
   <div
     ref={ref}
     styleName={cx('wrapper', {
-      left: getPaneClass(position, 'left'),
-      right: getPaneClass(position, 'right'),
+      left: isLeft,
+      right: isRight,
       [`indent-${indentLevel}`]: !!indentLevel,
       active: isActive,
     })}
@@ -49,6 +45,8 @@ Key.propTypes = {
   position: PropTypes.arrayOf(PropTypes.number),
   indentLevel: PropTypes.oneOf(['one', 'two']),
   onClick: PropTypes.func,
+  isLeft: PropTypes.bool,
+  isRight: PropTypes.bool,
   isActive: PropTypes.bool,
 }
 
