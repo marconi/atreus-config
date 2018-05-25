@@ -30,15 +30,15 @@
   flex-direction: column;
 }
 
-.top-legend {
+.top-label {
   text-align: center;
 }
 
-.no-bottom .top-legend {
+.no-bottom .top-label {
   padding-top: 4px;
 }
 
-.bottom-legend {
+.bottom-label {
   text-align: center;
 }
 

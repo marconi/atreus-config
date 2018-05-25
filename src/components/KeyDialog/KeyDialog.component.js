@@ -24,12 +24,6 @@ export const KeyDialogComponent = ({ position, coordinates, onClose }) => (
   >
     <div className="card-body">
       <div className="form-group">
-        <label className="form-label" htmlFor="top-key">Top Key</label>
-        <Select
-          options={options}
-          isClearable={true}
-        />
-        <label className="form-label" htmlFor="bottom-key">Bottom Key</label>
         <Select
           options={options}
           isClearable={true}

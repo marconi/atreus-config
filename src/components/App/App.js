@@ -3,11 +3,12 @@ import { Provider } from 'mobx-react';
 import CssModules from 'react-css-modules'
 
 import Keyboard from '../Keyboard'
-import uiService from '../../services/uiService'
+import { uiService, layoutService } from '../../services'
 import styles from './app.css'
 
 const services = {
-  uiService
+  uiService,
+  layoutService,
 }
 
 const App = () => (
@@ -22,6 +23,6 @@ const AppWrapper = (props) => (
   <Provider {...services}>
     <AppContainer {...props} />
   </Provider>
-);
+)
 
 export default AppWrapper

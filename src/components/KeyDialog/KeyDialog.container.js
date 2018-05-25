@@ -9,6 +9,11 @@ export class KeyDialogContainer extends Component {
     uiService: PropTypes.shape({
       setShowKeyDialogAt: PropTypes.func.isRequired,
     }),
+    position: PropTypes.array,
+    coordinates: PropTypes.shape({
+      top: PropTypes.number,
+      left: PropTypes.number,
+    }),
   }
 
   handleClose = () => {

@@ -7,9 +7,7 @@ import cx from 'classnames'
 import styles from './Key.css'
 
 export const Key = ({
-  topLegend,
-  bottomLegend,
-  position,
+  instance,
   indentLevel,
   onClick,
   isLeft,
@@ -26,13 +24,13 @@ export const Key = ({
     })}
     onClick={onClick}
   >
-    <div styleName={`inner ${(!bottomLegend) ? 'no-bottom' : ''}`}>
-      <div styleName='top-legend'>
-        {toUpper(topLegend)}
+    <div styleName={`inner ${(!instance.bottomLabel) ? 'no-bottom' : ''}`}>
+      <div styleName='top-label'>
+        {toUpper(instance.topLabel)}
       </div>
-      {bottomLegend &&
-        <div styleName='bottom-legend'>
-          {toUpper(bottomLegend)}
+      {instance.bottomLabel &&
+        <div styleName='bottom-label'>
+          {toUpper(instance.bottomLabel)}
         </div>
       }
     </div>
@@ -40,9 +38,11 @@ export const Key = ({
 )
 
 Key.propTypes = {
-  topLegend: PropTypes.string.isRequired,
-  bottomLegend: PropTypes.string,
-  position: PropTypes.arrayOf(PropTypes.number),
+  instance: PropTypes.shape({
+    topLabel: PropTypes.string.isRequired,
+    bottomLabel: PropTypes.string,
+    position: PropTypes.arrayOf(PropTypes.number),
+  }),
   indentLevel: PropTypes.oneOf(['one', 'two']),
   onClick: PropTypes.func,
   isLeft: PropTypes.bool,

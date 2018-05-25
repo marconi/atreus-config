@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CssModules from 'react-css-modules'
-import { chunk } from 'lodash'
+import { chunk, find, filter, map } from 'lodash'
 import cx from 'classnames'
 
 import Key from '../Key'
@@ -17,34 +17,32 @@ const getIndentLevel = (column) => {
   return null
 }
 
-export const Row = ({ keys, number, leftThumbKey, rightThumbKey, onKeyClick }) => {
-  const [ leftKeys, rightKeys ] = chunk(keys, 5);
+export const Row = ({ number, keys }) => {
+  const [ leftKeys, rightKeys ] = chunk(keys, (number === 3) ? 6 : 5);
+  const leftThumbKey = find(leftKeys, 'isThumb');
+  const rightThumbKey = find(rightKeys, 'isThumb');
 
   return (
     <div styleName='row'>
       <div styleName={cx('left-pane', `left-pane-row-${number}`)}>
-        {leftKeys.map((key, i) => (
+        {map(filter(leftKeys, { isThumb: false }), (key, i) => (
           <Key
             key={`left-pane-key-${i}`}
             indentLevel={getIndentLevel(i)}
-            {...key}
+            instance={key}
           />
         ))}
 
-        {leftThumbKey &&
-          <ThumbKey {...leftThumbKey} />
-        }
+        {leftThumbKey && <ThumbKey instance={leftThumbKey} />}
       </div>
       <div styleName={cx('right-pane', `right-pane-row-${number}`)}>
-        {rightThumbKey &&
-          <ThumbKey {...rightThumbKey} />
-        }
+        {rightThumbKey && <ThumbKey instance={rightThumbKey} />}
 
-        {rightKeys.map((key, i) => (
+        {map(filter(rightKeys, { isThumb: false }), (key, i) => (
           <Key
             key={`right-pane-key-${i}`}
             indentLevel={getIndentLevel(i)}
-            {...key}
+            instance={key}
           />
         ))}
       </div>
@@ -55,17 +53,14 @@ export const Row = ({ keys, number, leftThumbKey, rightThumbKey, onKeyClick }) =
 Row.propTypes = {
   number: PropTypes.number.isRequired,
   keys: PropTypes.arrayOf(PropTypes.shape({
-    topLegend: PropTypes.string,
-    bottomLegend: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    position: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.array,
+    ]).isRequired,
+    topLabel: PropTypes.string.isRequired,
+    bottomLabel: PropTypes.string.isRequired,
   })).isRequired,
-  leftThumbKey: PropTypes.shape({
-    topLegend: PropTypes.string,
-    bottomLegend: PropTypes.string,
-  }),
-  rightThumbKey: PropTypes.shape({
-    topLegend: PropTypes.string,
-    bottomLegend: PropTypes.string,
-  })
 }
 
 export default CssModules(Row, styles, { allowMultiple: true })

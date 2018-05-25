@@ -12,7 +12,13 @@ export class KeyboardContainer extends Component {
         coordinates: PropTypes.object,
       }),
       setKeyboard: PropTypes.func.isRequired,
-    }),
+    }).isRequired,
+    layoutService: PropTypes.shape({
+      rows: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.array,
+      ]).isRequired,
+    }).isRequired,
   }
 
   constructor(props) {
@@ -26,20 +32,26 @@ export class KeyboardContainer extends Component {
 
   render () {
     const {
-      showKeyDialogAt: {
-        position,
-        coordinates,
-      }
-    } = this.props.uiService
+      uiService: {
+        showKeyDialogAt: {
+          position,
+          coordinates,
+        }
+      },
+      layoutService: {
+        rows,
+      },
+    } = this.props
 
     return (
       <KeyboardComponent
         ref={this.ref}
-        position={(position.length) ? position.slice() : null}
-        coordinates={coordinates}
+        dialogPosition={(position.length) ? position.slice() : null}
+        dialogCoordinates={coordinates}
+        rows={rows.slice()}
       />
     )
   }
 }
 
-export default inject('uiService')(observer(KeyboardContainer))
+export default inject('uiService', 'layoutService')(observer(KeyboardContainer))

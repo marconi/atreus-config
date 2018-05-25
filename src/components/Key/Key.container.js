@@ -11,8 +11,14 @@ export class KeyContainer extends Component {
       setShowKeyDialogAt: PropTypes.func,
       isShowingKeyDialogAt: PropTypes.func,
     }),
-    position: PropTypes.arrayOf(PropTypes.number),
-    keyboard: PropTypes.object,
+    instance: PropTypes.shape({
+      position: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.array,
+      ]).isRequired,
+      keyboard: PropTypes.object,
+    }).isRequired,
+    indentLevel: PropTypes.string,
   }
 
   constructor(props) {
@@ -29,14 +35,14 @@ export class KeyContainer extends Component {
   handleClick = () => {
     const {
       uiService,
-      position,
+      instance: { position },
     } = this.props
 
     // HACK: to center keydialog inside a key,
     // we need to get the coordinates of the key's center
     // by creating on-fly marker element.
     // we then absolutely position it and take its top-left
-    // posidion.
+    // position.
 
     // create a temporary marker
     const marker = document.createElement('div')
@@ -60,7 +66,8 @@ export class KeyContainer extends Component {
   render () {
     const {
       uiService,
-      position,
+      instance,
+      indentLevel,
     } = this.props
 
     return (
@@ -68,10 +75,11 @@ export class KeyContainer extends Component {
         <KeyComponent
           ref={this.ref}
           onClick={this.handleClick}
-          isLeft={this.matchesPane(position, 'left')}
-          isRight={this.matchesPane(position, 'right')}
-          isActive={uiService.isShowingKeyDialogAt(position)}
-          {...this.props}
+          isLeft={this.matchesPane(instance.position, 'left')}
+          isRight={this.matchesPane(instance.position, 'right')}
+          isActive={uiService.isShowingKeyDialogAt(instance.position)}
+          instance={instance}
+          indentLevel={indentLevel}
         />
       </div>
     )
