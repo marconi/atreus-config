@@ -5,15 +5,11 @@ import Select from 'react-select'
 
 import styles from './KeyDialog.css'
 
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' }
-]
+const formatGroupLabel = (data) => <span>{data.label}</span>
 
 const dialogHalfWidth = 150
 
-export const KeyDialogComponent = ({ position, coordinates, onClose }) => (
+export const KeyDialogComponent = ({ position, coordinates, onClose, options }) => (
   <div
     styleName='wrapper'
     className="card"
@@ -26,6 +22,7 @@ export const KeyDialogComponent = ({ position, coordinates, onClose }) => (
       <div className="form-group">
         <Select
           options={options}
+          formatGroupLabel={formatGroupLabel}
           isClearable={true}
         />
       </div>
@@ -51,6 +48,13 @@ KeyDialogComponent.propTypes = {
     left: PropTypes.number,
   }),
   onClose: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.shape({
+      value: PropTypes.string,
+      label: PropTypes.string,
+    })).isRequired,
+  })).isRequired,
 }
 
 export default CssModules(KeyDialogComponent, styles)

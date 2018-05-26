@@ -68,6 +68,7 @@ export class KeyContainer extends Component {
       uiService,
       instance,
       indentLevel,
+      ...rest,
     } = this.props
 
     return (
@@ -80,6 +81,7 @@ export class KeyContainer extends Component {
           isActive={uiService.isShowingKeyDialogAt(instance.position)}
           instance={instance}
           indentLevel={indentLevel}
+          {...rest}
         />
       </div>
     )

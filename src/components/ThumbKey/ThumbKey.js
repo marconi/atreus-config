@@ -8,6 +8,6 @@ import styles from './ThumbKey.css'
 
 export const ThumbKey = (props) => (
   <Key {...props} styles={assign({}, keyStyles, styles)} />
-);
+)
 
 export default CssModules(ThumbKey)
