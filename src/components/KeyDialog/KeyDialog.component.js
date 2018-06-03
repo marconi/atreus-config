@@ -22,7 +22,7 @@ const Option = ({ children, ...rest }) => (
   </components.Option>
 )
 
-export const KeyDialogComponent = ({ keyModel, coordinates, onClose, options }) => (
+export const KeyDialogComponent = ({ value, coordinates, onChange, onUpdate, onClose, options }) => (
   <div
     styleName='wrapper'
     className="card"
@@ -34,6 +34,8 @@ export const KeyDialogComponent = ({ keyModel, coordinates, onClose, options }) 
     <div className="card-body">
       <div className="form-group">
         <Select
+          defaultValue={value}
+          onChange={onChange}
           components={{ Option }}
           formatGroupLabel={formatGroupLabel}
           isClearable={true}
@@ -44,7 +46,12 @@ export const KeyDialogComponent = ({ keyModel, coordinates, onClose, options }) 
     </div>
     <div className="card-footer">
       <div className="btn-group btn-group-block">
-        <button className="btn btn-primary">Update</button>
+        <button
+          className="btn btn-primary"
+          onClick={onUpdate}
+        >
+          Update
+        </button>
         <button
           className="btn"
           onClick={onClose}
@@ -54,14 +61,16 @@ export const KeyDialogComponent = ({ keyModel, coordinates, onClose, options }) 
       </div>
     </div>
   </div>
-);
+)
 
 KeyDialogComponent.propTypes = {
-  keyModel: PropTypes.object,
+  value: PropTypes.object,
   coordinates: PropTypes.shape({
     top: PropTypes.number,
     left: PropTypes.number,
   }),
+  onChange: PropTypes.func.isRequired,
+  onUpdate: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string,

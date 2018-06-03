@@ -3,6 +3,7 @@ import { Provider } from 'mobx-react';
 import CssModules from 'react-css-modules'
 
 import Keyboard from '../Keyboard'
+import Debugger from './Debugger'
 import { uiService, layoutService } from '../../services'
 import styles from './app.css'
 
@@ -14,6 +15,7 @@ const services = {
 const App = () => (
   <div styleName='app'>
     <Keyboard />
+    <Debugger />
   </div>
 )
 

@@ -1044,56 +1044,6 @@
       "bottomLabel": ""
     }
   ],
-  "modifiers": [
-    {
-      "symbol": "KC_LCTRL",
-      "description": "E0 Keyboard LeftControl",
-      "topLabel": "⌃",
-      "bottomLabel": ""
-    },
-    {
-      "symbol": "KC_LSHIFT",
-      "description": "E1 Keyboard LeftShift",
-      "topLabel": "⇧",
-      "bottomLabel": ""
-    },
-    {
-      "symbol": "KC_LALT",
-      "description": "E2 Keyboard LeftAlt",
-      "topLabel": "⌥",
-      "bottomLabel": ""
-    },
-    {
-      "symbol": "KC_LGUI",
-      "description": "E3 Keyboard Left GUI(Windows/Apple/Meta key)",
-      "topLabel": "⌘",
-      "bottomLabel": ""
-    },
-    {
-      "symbol": "KC_RCTRL",
-      "description": "E4 Keyboard RightControl",
-      "topLabel": "⌃",
-      "bottomLabel": ""
-    },
-    {
-      "symbol": "KC_RSHIFT",
-      "description": "E5 Keyboard RightShift",
-      "topLabel": "⇧",
-      "bottomLabel": ""
-    },
-    {
-      "symbol": "KC_RALT",
-      "description": "E6 Keyboard RightAlt",
-      "topLabel": "⌥",
-      "bottomLabel": ""
-    },
-    {
-      "symbol": "KC_RGUI",
-      "description": "E7 Keyboard Right GUI(Windows/Apple/Meta key)",
-      "topLabel": "⌘",
-      "bottomLabel": ""
-    }
-  ],
   "functions": [
     {
       "symbol": "KC_FN0",

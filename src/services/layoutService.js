@@ -1,5 +1,5 @@
-import { map, reduce, forEach, find, assign } from 'lodash'
-import { observable, action, computed } from 'mobx'
+import { map, reduce, forEach, find, assign, cloneDeep } from 'lodash'
+import { observable, action, computed, toJS } from 'mobx'
 
 import defaultKeys from './defaultLayout'
 import { KeyModel } from '../models'
@@ -33,9 +33,7 @@ export class LayoutService {
       return map(keys, ({ symbol, ...rest }, j) => {
         let key = this.getKeyCodeBySymbol(symbol)
         if (key) {
-          key = assign(key, rest)
-        } else {
-          console.error('Error looking up default key:', symbol)
+          key = this.reify(assign(cloneDeep(key), rest))
         }
         return key
       })
@@ -50,6 +48,11 @@ export class LayoutService {
         return false
       }
     })
+
+    if (!key) {
+      console.error('Error looking up key:', symbol)
+    }
+
     return key
   }
 
@@ -66,6 +69,8 @@ export class LayoutService {
   }
 
   reify = (data) => new KeyModel(data)
+
+  dumpRows = () => JSON.stringify(toJS(this.rows), null, 2)
 }
 
 export default new LayoutService()
