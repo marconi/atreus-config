@@ -2,10 +2,11 @@ import { forEach } from 'lodash'
 import { observable, action } from 'mobx';
 
 export default class KeyModel {
-  @observable name = ''
+  @observable symbol = null
   @observable position = []
-  @observable topLabel = ''
-  @observable bottomLabel = ''
+  @observable topLabel = null
+  @observable bottomLabel = null
+  @observable description = null
   @observable isThumb = false
 
   @action update = (data) => forEach(data, (val, key) => this[key] = val)

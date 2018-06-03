@@ -1,0 +1,1291 @@
+{
+  "common": [
+    {
+      "symbol": "KC_NO",
+      "description": "00 Reserved (no event indicated)",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_ROLL_OVER",
+      "description": "01 Keyboard ErrorRollOver",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_POST_FAIL",
+      "description": "02 Keyboard POSTFail",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_UNDEFINED",
+      "description": "03 Keyboard ErrorUndefined",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_A",
+      "description": "04 Keyboard a and A",
+      "topLabel": "a",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_B",
+      "description": "05 Keyboard b and B",
+      "topLabel": "b",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_C",
+      "description": "06 Keyboard c and C",
+      "topLabel": "c",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_D",
+      "description": "07 Keyboard d and D",
+      "topLabel": "d",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_E",
+      "description": "08 Keyboard e and E",
+      "topLabel": "e",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F",
+      "description": "09 Keyboard f and F",
+      "topLabel": "f",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_G",
+      "description": "0A Keyboard g and G",
+      "topLabel": "g",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_H",
+      "description": "0B Keyboard h and H",
+      "topLabel": "h",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_I",
+      "description": "0C Keyboard i and I",
+      "topLabel": "i",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_J",
+      "description": "0D Keyboard j and J",
+      "topLabel": "j",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_K",
+      "description": "0E Keyboard k and K",
+      "topLabel": "k",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_L",
+      "description": "0F Keyboard l and L",
+      "topLabel": "l",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_M",
+      "description": "10 Keyboard m and M",
+      "topLabel": "m",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_N",
+      "description": "11 Keyboard n and N",
+      "topLabel": "n",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_O",
+      "description": "12 Keyboard o and O",
+      "topLabel": "o",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_P",
+      "description": "13 Keyboard p and P",
+      "topLabel": "p",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_Q",
+      "description": "14 Keyboard q and Q",
+      "topLabel": "q",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_R",
+      "description": "15 Keyboard r and R",
+      "topLabel": "r",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_S",
+      "description": "16 Keyboard s and S",
+      "topLabel": "s",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_T",
+      "description": "17 Keyboard t and T",
+      "topLabel": "t",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_U",
+      "description": "18 Keyboard u and U",
+      "topLabel": "u",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_V",
+      "description": "19 Keyboard v and V",
+      "topLabel": "v",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_W",
+      "description": "1A Keyboard w and W",
+      "topLabel": "w",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_X",
+      "description": "1B Keyboard x and X",
+      "topLabel": "x",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_Y",
+      "description": "1C Keyboard y and Y",
+      "topLabel": "y",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_Z",
+      "description": "1D Keyboard z and Z",
+      "topLabel": "z",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_1",
+      "description": "1E Keyboard 1 and !",
+      "topLabel": "!",
+      "bottomLabel": "1"
+    },
+    {
+      "symbol": "KC_2",
+      "description": "1F Keyboard 2 and @",
+      "topLabel": "@",
+      "bottomLabel": "2"
+    },
+    {
+      "symbol": "KC_3",
+      "description": "20 Keyboard 3 and #",
+      "topLabel": "#",
+      "bottomLabel": "3"
+    },
+    {
+      "symbol": "KC_4",
+      "description": "21 Keyboard 4 and $",
+      "topLabel": "$",
+      "bottomLabel": "4"
+    },
+    {
+      "symbol": "KC_5",
+      "description": "22 Keyboard 5 and %",
+      "topLabel": "%",
+      "bottomLabel": "5"
+    },
+    {
+      "symbol": "KC_6",
+      "description": "23 Keyboard 6 and ^",
+      "topLabel": "^",
+      "bottomLabel": "6"
+    },
+    {
+      "symbol": "KC_7",
+      "description": "24 Keyboard 7 and &",
+      "topLabel": "&",
+      "bottomLabel": "7"
+    },
+    {
+      "symbol": "KC_8",
+      "description": "25 Keyboard 8 and *",
+      "topLabel": "*",
+      "bottomLabel": "8"
+    },
+    {
+      "symbol": "KC_9",
+      "description": "26 Keyboard 9 and (",
+      "topLabel": "(",
+      "bottomLabel": "9"
+    },
+    {
+      "symbol": "KC_0",
+      "description": "27 Keyboard 0 and )",
+      "topLabel": ")",
+      "bottomLabel": "0"
+    },
+    {
+      "symbol": "KC_ENTER",
+      "description": "28 Keyboard Return (ENTER)",
+      "topLabel": "↩",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_ESCAPE",
+      "description": "29 Keyboard ESCAPE",
+      "topLabel": "esc",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_BSPACE",
+      "description": "2A Keyboard DELETE (Backspace)",
+      "topLabel": "⌫",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_TAB",
+      "description": "2B Keyboard Tab",
+      "topLabel": "⇥",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_SPACE",
+      "description": "2C Keyboard Spacebar",
+      "topLabel": "spc",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_MINUS",
+      "description": "2D Keyboard - and (underscore)",
+      "topLabel": "_",
+      "bottomLabel": "-"
+    },
+    {
+      "symbol": "KC_EQUAL",
+      "description": "2E Keyboard = and +",
+      "topLabel": "+",
+      "bottomLabel": "="
+    },
+    {
+      "symbol": "KC_LBRACKET",
+      "description": "2F Keyboard [ and {",
+      "topLabel": "{",
+      "bottomLabel": "["
+    },
+    {
+      "symbol": "KC_RBRACKET",
+      "description": "30 Keyboard ] and }",
+      "topLabel": "}",
+      "bottomLabel": "]"
+    },
+    {
+      "symbol": "KC_BSLASH",
+      "description": "KC_BSLS",
+      "topLabel": "/",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_NONUS_HASH",
+      "description": "32 Keyboard Non-US # and ~",
+      "topLabel": "~",
+      "bottomLabel": "#"
+    },
+    {
+      "symbol": "KC_SCOLON",
+      "description": "33 Keyboard ; and :",
+      "topLabel": ":",
+      "bottomLabel": ";"
+    },
+    {
+      "symbol": "KC_QUOTE",
+      "description": "34 Keyboard ‘ and “",
+      "topLabel": "\"",
+      "bottomLabel": "'"
+    },
+    {
+      "symbol": "KC_GRAVE",
+      "description": "35 Keyboard Grave Accent and Tilde",
+      "topLabel": "~",
+      "bottomLabel": "`"
+    },
+    {
+      "symbol": "KC_COMMA",
+      "description": "36 Keyboard, and <",
+      "topLabel": "<",
+      "bottomLabel": ","
+    },
+    {
+      "symbol": "KC_DOT",
+      "description": "37 Keyboard . and >",
+      "topLabel": ">",
+      "bottomLabel": "."
+    },
+    {
+      "symbol": "KC_SLASH",
+      "description": "38 Keyboard / and ?",
+      "topLabel": "?",
+      "bottomLabel": "/"
+    },
+    {
+      "symbol": "KC_CAPSLOCK",
+      "description": "39 Keyboard Caps Lock",
+      "topLabel": "caps",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F1",
+      "description": "3A Keyboard F1",
+      "topLabel": "F1",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F2",
+      "description": "3B Keyboard F2",
+      "topLabel": "F2",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F3",
+      "description": "3C Keyboard F3",
+      "topLabel": "F3",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F4",
+      "description": "3D Keyboard F4",
+      "topLabel": "F4",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F5",
+      "description": "3E Keyboard F5",
+      "topLabel": "F5",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F6",
+      "description": "3F Keyboard F6",
+      "topLabel": "F6",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F7",
+      "description": "40 Keyboard F7",
+      "topLabel": "F7",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F8",
+      "description": "41 Keyboard F8",
+      "topLabel": "F8",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F9",
+      "description": "42 Keyboard F9",
+      "topLabel": "F9",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F10",
+      "description": "43 Keyboard F10",
+      "topLabel": "F10",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F11",
+      "description": "44 Keyboard F11",
+      "topLabel": "F11",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F12",
+      "description": "45 Keyboard F12",
+      "topLabel": "F12",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_PSCREEN",
+      "description": "46 Keyboard PrintScreen1",
+      "topLabel": "pscrn",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_SCKLOCK",
+      "description": "47 Keyboard Scroll Lock11",
+      "topLabel": "scklck",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_PAUSE",
+      "description": "48 Keyboard Pause1",
+      "topLabel": "pause",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INSERT",
+      "description": "49 Keyboard Insert1",
+      "topLabel": "insert",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_HOME",
+      "description": "4A Keyboard Home1",
+      "topLabel": "↖",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_PGUP",
+      "description": "4B Keyboard PageUp1",
+      "topLabel": "⇞",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_DELETE",
+      "description": "4C Keyboard Delete Forward",
+      "topLabel": "⌦",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_END",
+      "description": "4D Keyboard End1",
+      "topLabel": "↘",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_PGDOWN",
+      "description": "4E Keyboard PageDown1",
+      "topLabel": "⇟",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RIGHT",
+      "description": "4F Keyboard RightArrow1",
+      "topLabel": "→",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LEFT",
+      "description": "50 Keyboard LeftArrow1",
+      "topLabel": "←",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_DOWN",
+      "description": "51 Keyboard DownArrow1",
+      "topLabel": "↓",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_UP",
+      "description": "52 Keyboard UpArrow1",
+      "topLabel": "↑",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_NUMLOCK",
+      "description": "53 Keypad Num Lock and Clear11",
+      "topLabel": "numlck",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_SLASH",
+      "description": "54 Keypad /1",
+      "topLabel": "/",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_ASTERISK",
+      "description": "55 Keypad *",
+      "topLabel": "*",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_MINUS",
+      "description": "56 Keypad -",
+      "topLabel": "-",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_PLUS",
+      "description": "57 Keypad +",
+      "topLabel": "+",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_ENTER",
+      "description": "58 Keypad ENTER5",
+      "topLabel": "↩",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_1",
+      "description": "59 Keypad 1 and End",
+      "topLabel": "↘",
+      "bottomLabel": "1"
+    },
+    {
+      "symbol": "KC_KP_2",
+      "description": "5A Keypad 2 and Down Arrow",
+      "topLabel": "↓",
+      "bottomLabel": "2"
+    },
+    {
+      "symbol": "KC_KP_3",
+      "description": "5B Keypad 3 and PageDn",
+      "topLabel": "⇟",
+      "bottomLabel": "3"
+    },
+    {
+      "symbol": "KC_KP_4",
+      "description": "5C Keypad 4 and Left Arrow",
+      "topLabel": "←",
+      "bottomLabel": "4"
+    },
+    {
+      "symbol": "KC_KP_5",
+      "description": "5D Keypad 5",
+      "topLabel": "5",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_6",
+      "description": "5E Keypad 6 and Right Arrow",
+      "topLabel": "6",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_7",
+      "description": "5F Keypad 7 and Home",
+      "topLabel": "7",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_8",
+      "description": "60 Keypad 8 and Up Arrow",
+      "topLabel": "8",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_9",
+      "description": "61 Keypad 9 and PageUp",
+      "topLabel": "9",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_0",
+      "description": "62 Keypad 0 and Insert",
+      "topLabel": "0",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_DOT",
+      "description": "63 Keypad . and Delete",
+      "topLabel": "⌦",
+      "bottomLabel": "."
+    },
+    {
+      "symbol": "KC_NONUS_BSLASH",
+      "description": "KC_NUBS",
+      "topLabel": "\\",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_APPLICATION",
+      "description": "65 Keyboard Application10",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_POWER",
+      "description": "66 Keyboard Power9",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_EQUAL",
+      "description": "67 Keypad =",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F13",
+      "description": "68 Keyboard F13",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F14",
+      "description": "69 Keyboard F14",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F15",
+      "description": "6A Keyboard F15",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F16",
+      "description": "6B Keyboard F16",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F17",
+      "description": "6C Keyboard F17",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F18",
+      "description": "6D Keyboard F18",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F19",
+      "description": "6E Keyboard F19",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F20",
+      "description": "6F Keyboard F20",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F21",
+      "description": "70 Keyboard F21",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F22",
+      "description": "71 Keyboard F22",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F23",
+      "description": "72 Keyboard F23",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_F24",
+      "description": "73 Keyboard F24",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_EXECUTE",
+      "description": "74 Keyboard Execute",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_HELP",
+      "description": "75 Keyboard Help",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_MENU",
+      "description": "76 Keyboard Menu",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_SELECT",
+      "description": "77 Keyboard Select",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_STOP",
+      "description": "78 Keyboard Stop",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_AGAIN",
+      "description": "79 Keyboard Again",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_UNDO",
+      "description": "7A Keyboard Undo",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_CUT",
+      "description": "7B Keyboard Cut",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_COPY",
+      "description": "7C Keyboard Copy",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_PASTE",
+      "description": "7D Keyboard Paste",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FIND",
+      "description": "7E Keyboard Find",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC__MUTE",
+      "description": "7F Keyboard Mute",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC__VOLUP",
+      "description": "80 Keyboard Volume Up",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC__VOLDOWN",
+      "description": "81 Keyboard Volume Down",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LOCKING_CAPS",
+      "description": "82 Keyboard Locking Caps Lock12",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LOCKING_NUM",
+      "description": "83 Keyboard Locking Num Lock12",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LOCKING_SCROLL",
+      "description": "84 Keyboard Locking Scroll Lock12",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_COMMA",
+      "description": "85 Keypad Comma27",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_KP_EQUAL_AS400",
+      "description": "86 Keypad Equal Sign29",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT1",
+      "description": "87 Keyboard International115,28",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT2",
+      "description": "88 Keyboard International216",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT3",
+      "description": "89 Keyboard International317",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT4",
+      "description": "8A Keyboard International418",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT5",
+      "description": "8B Keyboard International519",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT6",
+      "description": "8C Keyboard International620",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT7",
+      "description": "8D Keyboard International721",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT8",
+      "description": "8E Keyboard International822",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_INT9",
+      "description": "8F Keyboard International922",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG1",
+      "description": "90 Keyboard LANG125",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG2",
+      "description": "91 Keyboard LANG226",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG3",
+      "description": "92 Keyboard LANG330",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG4",
+      "description": "93 Keyboard LANG431",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG5",
+      "description": "94 Keyboard LANG532",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG6",
+      "description": "95 Keyboard LANG68",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG7",
+      "description": "96 Keyboard LANG78",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG8",
+      "description": "97 Keyboard LANG88",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LANG9",
+      "description": "98 Keyboard LANG98",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_ALT_ERASE",
+      "description": "99 Keyboard Alternate Erase7",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_SYSREQ",
+      "description": "9A Keyboard SysReq/Attention1",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_CANCEL",
+      "description": "9B Keyboard Cancel",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_CLEAR",
+      "description": "9C Keyboard Clear",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_PRIOR",
+      "description": "9D Keyboard Prior",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RETURN",
+      "description": "9E Keyboard Return",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_SEPARATOR",
+      "description": "9F Keyboard Separator",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_OUT",
+      "description": "A0 Keyboard Out",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_OPER",
+      "description": "A1 Keyboard Oper",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_CLEAR_AGAIN",
+      "description": "A2 Keyboard Clear/Again",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_CRSEL",
+      "description": "A3 Keyboard CrSel/Props",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_EXSEL",
+      "description": "A4 Keyboard ExSel",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "/* Modifiers */",
+      "topLabel": "",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LCTRL",
+      "description": "E0 Keyboard LeftControl",
+      "topLabel": "⌃",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LSHIFT",
+      "description": "E1 Keyboard LeftShift",
+      "topLabel": "⇧",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LALT",
+      "description": "E2 Keyboard LeftAlt",
+      "topLabel": "⌥",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LGUI",
+      "description": "E3 Keyboard Left GUI(Windows/Apple/Meta key)",
+      "topLabel": "⌘",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RCTRL",
+      "description": "E4 Keyboard RightControl",
+      "topLabel": "⌃",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RSHIFT",
+      "description": "E5 Keyboard RightShift",
+      "topLabel": "⇧",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RALT",
+      "description": "E6 Keyboard RightAlt",
+      "topLabel": "⌥",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RGUI",
+      "description": "E7 Keyboard Right GUI(Windows/Apple/Meta key)",
+      "topLabel": "⌘",
+      "bottomLabel": ""
+    }
+  ],
+  "modifiers": [
+    {
+      "symbol": "KC_LCTRL",
+      "description": "E0 Keyboard LeftControl",
+      "topLabel": "⌃",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LSHIFT",
+      "description": "E1 Keyboard LeftShift",
+      "topLabel": "⇧",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LALT",
+      "description": "E2 Keyboard LeftAlt",
+      "topLabel": "⌥",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_LGUI",
+      "description": "E3 Keyboard Left GUI(Windows/Apple/Meta key)",
+      "topLabel": "⌘",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RCTRL",
+      "description": "E4 Keyboard RightControl",
+      "topLabel": "⌃",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RSHIFT",
+      "description": "E5 Keyboard RightShift",
+      "topLabel": "⇧",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RALT",
+      "description": "E6 Keyboard RightAlt",
+      "topLabel": "⌥",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_RGUI",
+      "description": "E7 Keyboard Right GUI(Windows/Apple/Meta key)",
+      "topLabel": "⌘",
+      "bottomLabel": ""
+    }
+  ],
+  "functions": [
+    {
+      "symbol": "KC_FN0",
+      "description": "F0",
+      "topLabel": "F0",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN1",
+      "description": "F1",
+      "topLabel": "F1",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN2",
+      "description": "F2",
+      "topLabel": "F2",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN3",
+      "description": "F3",
+      "topLabel": "F3",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN4",
+      "description": "F4",
+      "topLabel": "F4",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN5",
+      "description": "F5",
+      "topLabel": "F5",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN6",
+      "description": "F6",
+      "topLabel": "F6",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN7",
+      "description": "F7",
+      "topLabel": "F7",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN8",
+      "description": "F8",
+      "topLabel": "F8",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN9",
+      "description": "F9",
+      "topLabel": "F9",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN10",
+      "description": "F10",
+      "topLabel": "F10",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN11",
+      "description": "F11",
+      "topLabel": "F11",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN12",
+      "description": "F12",
+      "topLabel": "F12",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN13",
+      "description": "F13",
+      "topLabel": "F13",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN14",
+      "description": "F14",
+      "topLabel": "F14",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN15",
+      "description": "F15",
+      "topLabel": "F15",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN16",
+      "description": "F16",
+      "topLabel": "F16",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN17",
+      "description": "F17",
+      "topLabel": "F17",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN18",
+      "description": "F18",
+      "topLabel": "F18",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN19",
+      "description": "F19",
+      "topLabel": "F19",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN20",
+      "description": "F20",
+      "topLabel": "F20",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN21",
+      "description": "F21",
+      "topLabel": "F21",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN22",
+      "description": "F22",
+      "topLabel": "F22",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN23",
+      "description": "F23",
+      "topLabel": "F23",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN24",
+      "description": "F24",
+      "topLabel": "F24",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN25",
+      "description": "F25",
+      "topLabel": "F25",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN26",
+      "description": "F26",
+      "topLabel": "F26",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN27",
+      "description": "F27",
+      "topLabel": "F27",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN28",
+      "description": "F28",
+      "topLabel": "F28",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN29",
+      "description": "F29",
+      "topLabel": "F29",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN30",
+      "description": "F30",
+      "topLabel": "F30",
+      "bottomLabel": ""
+    },
+    {
+      "symbol": "KC_FN31",
+      "description": "F31",
+      "topLabel": "F31",
+      "bottomLabel": ""
+    }
+  ]
+}

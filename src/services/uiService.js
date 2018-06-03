@@ -6,23 +6,23 @@ export class UIService {
   @action setKeyboard = (keyboard) => this.keyboard = keyboard
 
   @observable showKeyDialogAt = {
-    position: [],
+    keyModel: null,
     coordinates: {
       top: null,
       left: null,
     },
   }
-  @action setShowKeyDialogAt = (position, coordinates) => {
-    assign(this.showKeyDialogAt, { position, coordinates })
+  @action setShowKeyDialogAt = (keyModel, coordinates) => {
+    assign(this.showKeyDialogAt, { keyModel, coordinates })
   }
 
   isShowingKeyDialogAt = ([ x, y ]) => {
-    if (!this.showKeyDialogAt.position.length) {
+    if (!this.showKeyDialogAt.keyModel) {
       return false
     }
 
-    const xx = get(this.showKeyDialogAt, 'position[0]')
-    const yy = get(this.showKeyDialogAt, 'position[1]')
+    const xx = get(this.showKeyDialogAt.keyModel, 'position[0]')
+    const yy = get(this.showKeyDialogAt.keyModel, 'position[1]')
     return xx === x && yy === y
   }
 }

@@ -29,20 +29,20 @@ export const Row = ({ number, keys }) => {
           <Key
             key={`left-pane-key-${i}`}
             indentLevel={getIndentLevel(i)}
-            instance={key}
+            keyModel={key}
           />
         ))}
 
-        {leftThumbKey && <ThumbKey instance={leftThumbKey} />}
+        {leftThumbKey && <ThumbKey keyModel={leftThumbKey} />}
       </div>
       <div styleName={cx('right-pane', `right-pane-row-${number}`)}>
-        {rightThumbKey && <ThumbKey instance={rightThumbKey} />}
+        {rightThumbKey && <ThumbKey keyModel={rightThumbKey} />}
 
         {map(filter(rightKeys, { isThumb: false }), (key, i) => (
           <Key
             key={`right-pane-key-${i}`}
             indentLevel={getIndentLevel(i)}
-            instance={key}
+            keyModel={key}
           />
         ))}
       </div>
@@ -53,13 +53,13 @@ export const Row = ({ number, keys }) => {
 Row.propTypes = {
   number: PropTypes.number.isRequired,
   keys: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     position: PropTypes.oneOfType([
       PropTypes.object,
       PropTypes.array,
     ]).isRequired,
-    topLabel: PropTypes.string.isRequired,
-    bottomLabel: PropTypes.string.isRequired,
+    topLabel: PropTypes.string,
+    bottomLabel: PropTypes.string,
   })).isRequired,
 }
 

@@ -6,3 +6,8 @@
   border: 0;
   box-shadow: 0 0.2rem 0.5rem rgba(69,77,93,.3);
 }
+
+.option {
+  color: #aaaaaa;
+  font-size: 12px;
+}

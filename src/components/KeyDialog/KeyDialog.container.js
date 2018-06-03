@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { inject, observer } from 'mobx-react'
-import { toJS } from 'mobx'
 
 import KeyDialogComponent from './KeyDialog.component'
 
@@ -11,39 +10,46 @@ export class KeyDialogContainer extends Component {
       setShowKeyDialogAt: PropTypes.func.isRequired,
     }).isRequired,
     layoutService: PropTypes.shape({
-      keyCodes: PropTypes.oneOfType([
+      keyCodesOptions: PropTypes.array.isRequired,
+    }).isRequired,
+    keyModel: PropTypes.shape({
+      name: PropTypes.string,
+      position: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array,
       ]).isRequired,
+      topLabel: PropTypes.string,
+      bottomLabel: PropTypes.string,
+      isThumb: PropTypes.bool,
     }).isRequired,
-    position: PropTypes.array,
     coordinates: PropTypes.shape({
       top: PropTypes.number,
       left: PropTypes.number,
-    }),
+    }).isRequired,
   }
 
   handleClose = () => {
-    const position = []
     const coordinates = {
       top: null,
       left: null
     }
-    this.props.uiService.setShowKeyDialogAt(position, coordinates)
+    this.props.uiService.setShowKeyDialogAt(null, coordinates)
   }
 
   render () {
     const {
       layoutService: {
-        keyCodes,
+        keyCodesOptions,
       },
+      keyModel,
       ...rest,
     } = this.props;
 
     return (
       <KeyDialogComponent
         onClose={this.handleClose}
-        options={toJS(keyCodes)}
+        options={keyCodesOptions}
+        keyModel={keyModel}
         {...rest}
       />
     )

@@ -7,7 +7,7 @@ import Row from '../Row'
 import KeyDialog from '../KeyDialog'
 import styles from './Keyboard.css'
 
-export const KeyboardComponent = (({ rows, dialogPosition, dialogCoordinates }, ref) => (
+export const KeyboardComponent = (({ rows, keyModel, dialogCoordinates }, ref) => (
   <div ref={ref} styleName='keyboard'>
     {map(rows, (row, i) => (
       <Row
@@ -17,9 +17,9 @@ export const KeyboardComponent = (({ rows, dialogPosition, dialogCoordinates }, 
       />
     ))}
 
-    {dialogPosition && dialogCoordinates &&
+    {keyModel && dialogCoordinates &&
       <KeyDialog
-        position={dialogPosition}
+        keyModel={keyModel}
         coordinates={dialogCoordinates}
       />
     }
@@ -33,7 +33,7 @@ KeyboardComponent.propTypes = {
     topLabel: PropTypes.string,
     bottomLabel: PropTypes.string,
   }))),
-  dialogPosition: PropTypes.array,
+  keyModel: PropTypes.object,
   dialogCoordinates: PropTypes.shape({
     top: PropTypes.number,
     left: PropTypes.number,

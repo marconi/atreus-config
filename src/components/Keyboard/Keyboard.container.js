@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { inject, observer, PropTypes as MobxPropTypes } from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 
 import KeyboardComponent from './Keyboard.component'
 
@@ -8,7 +8,16 @@ export class KeyboardContainer extends Component {
   static propTypes = {
     uiService: PropTypes.shape({
       showKeyDialogAt: PropTypes.shape({
-        position: MobxPropTypes.observableArray,
+        keyModel: PropTypes.shape({
+          name: PropTypes.string,
+          position: PropTypes.oneOfType([
+            PropTypes.object,
+            PropTypes.array,
+          ]).isRequired,
+          topLabel: PropTypes.string,
+          bottomLabel: PropTypes.string,
+          isThumb: PropTypes.bool,
+        }),
         coordinates: PropTypes.object,
       }),
       setKeyboard: PropTypes.func.isRequired,
@@ -34,7 +43,7 @@ export class KeyboardContainer extends Component {
     const {
       uiService: {
         showKeyDialogAt: {
-          position,
+          keyModel,
           coordinates,
         }
       },
@@ -46,7 +55,7 @@ export class KeyboardContainer extends Component {
     return (
       <KeyboardComponent
         ref={this.ref}
-        dialogPosition={(position.length) ? position.slice() : null}
+        keyModel={keyModel}
         dialogCoordinates={coordinates}
         rows={rows.slice()}
       />

@@ -1,15 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CssModules from 'react-css-modules'
-import Select from 'react-select'
+import Select, { components } from 'react-select'
 
 import styles from './KeyDialog.css'
 
-const formatGroupLabel = (data) => <span>{data.label}</span>
 
 const dialogHalfWidth = 150
+const formatGroupLabel = (data) => <span>{data.label}</span>
 
-export const KeyDialogComponent = ({ position, coordinates, onClose, options }) => (
+const selectStyles = {
+  valueContainer: (base, state) => {
+    return { ...base, overflowY: 'inherit' }
+  }
+}
+
+const Option = ({ children, ...rest }) => (
+  <components.Option {...rest}>
+    <div>{children}</div>
+    <div className={styles.option}>{rest.data.value}</div>
+  </components.Option>
+)
+
+export const KeyDialogComponent = ({ keyModel, coordinates, onClose, options }) => (
   <div
     styleName='wrapper'
     className="card"
@@ -21,9 +34,11 @@ export const KeyDialogComponent = ({ position, coordinates, onClose, options }) 
     <div className="card-body">
       <div className="form-group">
         <Select
-          options={options}
+          components={{ Option }}
           formatGroupLabel={formatGroupLabel}
           isClearable={true}
+          options={options}
+          styles={selectStyles}
         />
       </div>
     </div>
@@ -42,7 +57,7 @@ export const KeyDialogComponent = ({ position, coordinates, onClose, options }) 
 );
 
 KeyDialogComponent.propTypes = {
-  position: PropTypes.array,
+  keyModel: PropTypes.object,
   coordinates: PropTypes.shape({
     top: PropTypes.number,
     left: PropTypes.number,

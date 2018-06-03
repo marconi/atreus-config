@@ -10,13 +10,13 @@ export class KeyContainer extends Component {
     uiService: PropTypes.shape({
       setShowKeyDialogAt: PropTypes.func,
       isShowingKeyDialogAt: PropTypes.func,
+      keyboard: PropTypes.object,
     }),
-    instance: PropTypes.shape({
+    keyModel: PropTypes.shape({
       position: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array,
       ]).isRequired,
-      keyboard: PropTypes.object,
     }).isRequired,
     indentLevel: PropTypes.string,
   }
@@ -35,7 +35,7 @@ export class KeyContainer extends Component {
   handleClick = () => {
     const {
       uiService,
-      instance: { position },
+      keyModel,
     } = this.props
 
     // HACK: to center keydialog inside a key,
@@ -57,7 +57,7 @@ export class KeyContainer extends Component {
       top: (keyRect.top - keyboardRect.top) + keyHalf,
       left: (keyRect.left - keyboardRect.left) + keyHalf,
     }
-    uiService.setShowKeyDialogAt(position, coordinates)
+    uiService.setShowKeyDialogAt(keyModel, coordinates)
 
     // remove marker
     this.ref.current.removeChild(marker)
@@ -66,7 +66,7 @@ export class KeyContainer extends Component {
   render () {
     const {
       uiService,
-      instance,
+      keyModel,
       indentLevel,
       ...rest,
     } = this.props
@@ -76,10 +76,10 @@ export class KeyContainer extends Component {
         <KeyComponent
           ref={this.ref}
           onClick={this.handleClick}
-          isLeft={this.matchesPane(instance.position, 'left')}
-          isRight={this.matchesPane(instance.position, 'right')}
-          isActive={uiService.isShowingKeyDialogAt(instance.position)}
-          instance={instance}
+          isLeft={this.matchesPane(keyModel.position, 'left')}
+          isRight={this.matchesPane(keyModel.position, 'right')}
+          isActive={uiService.isShowingKeyDialogAt(keyModel.position)}
+          keyModel={keyModel}
           indentLevel={indentLevel}
           {...rest}
         />
