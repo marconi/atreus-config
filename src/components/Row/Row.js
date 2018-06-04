@@ -17,8 +17,8 @@ const getIndentLevel = (column) => {
   return null
 }
 
-export const Row = ({ number, keys }) => {
-  const [ leftKeys, rightKeys ] = chunk(keys, (number === 3) ? 6 : 5);
+export const Row = ({ number, keyCodes }) => {
+  const [ leftKeys, rightKeys ] = chunk(keyCodes, (number === 3) ? 6 : 5);
   const leftThumbKey = find(leftKeys, 'isThumb');
   const rightThumbKey = find(rightKeys, 'isThumb');
 
@@ -52,7 +52,7 @@ export const Row = ({ number, keys }) => {
 
 Row.propTypes = {
   number: PropTypes.number.isRequired,
-  keys: PropTypes.arrayOf(PropTypes.shape({
+  keyCodes: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
     position: PropTypes.oneOfType([
       PropTypes.object,

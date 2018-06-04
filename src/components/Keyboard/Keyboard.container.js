@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { inject, observer } from 'mobx-react'
+import { head } from 'lodash'
 
 import KeyboardComponent from './Keyboard.component'
 
@@ -57,7 +58,7 @@ export class KeyboardContainer extends Component {
         ref={this.ref}
         keyModel={keyModel}
         dialogCoordinates={coordinates}
-        layers={layers.slice()}
+        layer={head(layers)}
       />
     )
   }

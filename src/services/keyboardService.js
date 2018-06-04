@@ -21,17 +21,16 @@ export class keyboardService {
     this.setKeyCodes(keyCodes)
 
     // init default layout
-    forEach(defaultLayout, (keyCodes) => {
-      const rows = map(keyCodes, ({ symbol, ...rest }) => {
+    const rows = map(defaultLayout, (row, i) => {
+      return map(row, ({ symbol, ...rest }) => {
         let key = this.getKeyCodeBySymbol(symbol)
         if (key) {
           key = this.reify(assign({}, key, rest))
         }
         return key
       })
-
-      this.addLayer(new LayerModel(rows))
     })
+    this.addLayer(new LayerModel('Layer 0', rows))
   }
 
   getKeyCodeBySymbol = (symbol) => {
