@@ -11,12 +11,12 @@ export class KeyDialogContainer extends Component {
     uiService: PropTypes.shape({
       setShowKeyDialogAt: PropTypes.func.isRequired,
     }).isRequired,
-    layoutService: PropTypes.shape({
+    keyboardService: PropTypes.shape({
       keyCodesOptions: PropTypes.array.isRequired,
       getKeyCodeBySymbol: PropTypes.func.isRequired,
     }).isRequired,
     keyModel: PropTypes.shape({
-      name: PropTypes.string,
+      symbol: PropTypes.string,
       position: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array,
@@ -31,13 +31,13 @@ export class KeyDialogContainer extends Component {
     }).isRequired,
   }
 
-  @observable selectedSymbol = null
+  @observable selectedSymbol = this.props.keyModel.symbol
   @action handleOnChange = (selected) => this.selectedSymbol = get(selected, 'value', 'KC_NO')
 
   handleOnUpdate = () => {
     const {
       keyModel,
-      layoutService: {
+      keyboardService: {
         getKeyCodeBySymbol,
       },
     } = this.props
@@ -65,7 +65,7 @@ export class KeyDialogContainer extends Component {
 
   render () {
     const {
-      layoutService: {
+      keyboardService: {
         keyCodesOptions,
       },
       keyModel,
@@ -90,4 +90,4 @@ export class KeyDialogContainer extends Component {
   }
 }
 
-export default inject('uiService', 'layoutService')(observer(KeyDialogContainer))
+export default inject('uiService', 'keyboardService')(observer(KeyDialogContainer))

@@ -7,13 +7,13 @@ import Row from '../Row'
 import KeyDialog from '../KeyDialog'
 import styles from './Keyboard.css'
 
-export const KeyboardComponent = (({ rows, keyModel, dialogCoordinates }, ref) => (
+export const KeyboardComponent = (({ layers, keyModel, dialogCoordinates }, ref) => (
   <div ref={ref} styleName='keyboard'>
-    {map(rows, (row, i) => (
+    {map(layers, (layer, i) => (
       <Row
         key={`row-${i}`}
         number={i}
-        keys={row.slice()}
+        keys={layer.rows.slice()}
       />
     ))}
 
@@ -27,12 +27,12 @@ export const KeyboardComponent = (({ rows, keyModel, dialogCoordinates }, ref) =
 ))
 
 KeyboardComponent.propTypes = {
-  rows: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-    position: PropTypes.arrayOf(PropTypes.number),
-    topLabel: PropTypes.string,
-    bottomLabel: PropTypes.string,
-  }))),
+  layers: PropTypes.arrayOf(PropTypes.shape({
+    rows: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.array,
+    ]).isRequired,
+  })),
   keyModel: PropTypes.object,
   dialogCoordinates: PropTypes.shape({
     top: PropTypes.number,

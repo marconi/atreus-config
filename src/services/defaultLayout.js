@@ -1,5 +1,5 @@
 
-const rows = [
+const layout = [
   [
     {symbol: 'KC_Q', position: [0, 0]},
     {symbol: 'KC_W', position: [1, 0]},
@@ -52,4 +52,4 @@ const rows = [
   ],
 ]
 
-export default rows;
+export default layout;

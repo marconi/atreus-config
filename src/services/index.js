@@ -1,4 +1,4 @@
-import layoutService from './layoutService'
+import keyboardService from './keyboardService'
 import uiService from './uiService'
 
-export { layoutService, uiService }
+export { keyboardService, uiService }

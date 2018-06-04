@@ -1,5 +1,5 @@
 import { forEach } from 'lodash'
-import { observable, action } from 'mobx';
+import { observable, action } from 'mobx'
 
 export default class KeyModel {
   @observable symbol = null

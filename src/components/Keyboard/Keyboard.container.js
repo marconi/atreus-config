@@ -9,7 +9,7 @@ export class KeyboardContainer extends Component {
     uiService: PropTypes.shape({
       showKeyDialogAt: PropTypes.shape({
         keyModel: PropTypes.shape({
-          name: PropTypes.string,
+          symbol: PropTypes.string,
           position: PropTypes.oneOfType([
             PropTypes.object,
             PropTypes.array,
@@ -22,8 +22,8 @@ export class KeyboardContainer extends Component {
       }),
       setKeyboard: PropTypes.func.isRequired,
     }).isRequired,
-    layoutService: PropTypes.shape({
-      rows: PropTypes.oneOfType([
+    keyboardService: PropTypes.shape({
+      layers: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array,
       ]).isRequired,
@@ -47,8 +47,8 @@ export class KeyboardContainer extends Component {
           coordinates,
         }
       },
-      layoutService: {
-        rows,
+      keyboardService: {
+        layers,
       },
     } = this.props
 
@@ -57,10 +57,10 @@ export class KeyboardContainer extends Component {
         ref={this.ref}
         keyModel={keyModel}
         dialogCoordinates={coordinates}
-        rows={rows.slice()}
+        layers={layers.slice()}
       />
     )
   }
 }
 
-export default inject('uiService', 'layoutService')(observer(KeyboardContainer))
+export default inject('uiService', 'keyboardService')(observer(KeyboardContainer))
