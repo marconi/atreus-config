@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { inject, observer } from 'mobx-react'
-import { head } from 'lodash'
 
 import KeyboardComponent from './Keyboard.component'
 
@@ -23,12 +22,13 @@ export class KeyboardContainer extends Component {
       }),
       setKeyboard: PropTypes.func.isRequired,
     }).isRequired,
-    keyboardService: PropTypes.shape({
-      layers: PropTypes.oneOfType([
+    layer: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      rows: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array,
       ]).isRequired,
-    }).isRequired,
+    }).isRequired 
   }
 
   constructor(props) {
@@ -48,9 +48,7 @@ export class KeyboardContainer extends Component {
           coordinates,
         }
       },
-      keyboardService: {
-        layers,
-      },
+      layer,
     } = this.props
 
     return (
@@ -58,7 +56,7 @@ export class KeyboardContainer extends Component {
         ref={this.ref}
         keyModel={keyModel}
         dialogCoordinates={coordinates}
-        layer={head(layers)}
+        layer={layer}
       />
     )
   }

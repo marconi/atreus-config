@@ -8,24 +8,21 @@ import KeyDialog from '../KeyDialog'
 import styles from './Keyboard.css'
 
 export const KeyboardComponent = (({ layer, keyModel, dialogCoordinates }, ref) => (
-  <div>
-    <div styleName='layer-info'>[ {layer.name} / 2 ]</div> 
-    <div ref={ref} styleName='keyboard'>
-      {map(layer.rows.slice(), (row, i) => (
-        <Row
-          key={`row-${i}`}
-          number={i}
-          keyCodes={row.slice()}
-        />
-      ))}
+  <div ref={ref} styleName='keyboard'>
+    {map(layer.rows.slice(), (row, i) => (
+      <Row
+        key={`row-${i}`}
+        number={i}
+        keyCodes={row.slice()}
+      />
+    ))}
 
-      {keyModel && dialogCoordinates &&
-        <KeyDialog
-          keyModel={keyModel}
-          coordinates={dialogCoordinates}
-        />
-      }
-    </div>
+    {keyModel && dialogCoordinates &&
+      <KeyDialog
+        keyModel={keyModel}
+        coordinates={dialogCoordinates}
+      />
+    }
   </div>
 ))
 

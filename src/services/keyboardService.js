@@ -61,6 +61,8 @@ export class keyboardService {
     })
   }
 
+  getLayer = (layerNum) => (this.layers.length > layerNum) ? this.layers[layerNum] : null
+
   reify = (data) => new KeyModel(data)
 
   dumpRows = () => JSON.stringify(toJS(this.layers), null, 2)

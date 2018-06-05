@@ -16,6 +16,9 @@ export class UIService {
     assign(this.showKeyDialogAt, { keyModel, coordinates })
   }
 
+  @observable activeLayer = 0
+  @action setActiveLayer = (layer) => this.activeLayer = layer
+
   isShowingKeyDialogAt = ([ x, y ]) => {
     if (!this.showKeyDialogAt.keyModel) {
       return false
